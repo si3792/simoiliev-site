@@ -28,7 +28,7 @@
   </head>
   <body ng-app="mainApp" ng-controller="mainController as mainCtrl">
 
-    <main> <!-- Experimental: snapscroll="snap-duration=2000" fit-window-height=""> -->
+    <!--<main>  Experimental: snapscroll="snap-duration=2000" fit-window-height=""> -->
       <!-- Intro Area -->
       <div id="intro-area" class="full-height" smooth-scroll>
         <div class="vertical-offset-large">
@@ -101,9 +101,15 @@
         </div>
 
       <!-- Liftoff Area -->
-      <div id="liftoff-area" class="full-height" data-vide-bg="webm: videos/liftoff.webm, png: videos/liftoff.png" data-vide-options="posterType: png">
+      <div id="liftoff-area" class="full-height" >
+        <div class="full-height" data-vide-bg="webm: videos/liftoff.webm, png: videos/liftoff.png" data-vide-options="posterType: png">
+        </div>
+      </div>
 
-    </main>
+      <!-- Footer Area -->
+      <div id="footer-area" class="full-height">
+        This is a test
+      </div>
 
   </body>
 </html>
