@@ -137,7 +137,7 @@ html, body {
 }
 
 .liftoff-info {
-  min-height: 35vh;
+  min-height: 20vh;
   min-width: 40vh;
   margin-right: 20px;
   color: rgb(255, 148, 23);
@@ -148,9 +148,19 @@ html, body {
 
 .liftoff-title {
   border-radius: 0 25px 0 0;
-  min-height: 15vh;
+  min-height: 5vh;
 }
 
 .liftoff-text {
-  min-height: 20vh;
+  min-height: 15vh;
+}
+
+.liftoff-text a {
+  display: inline;
+  text-decoration: underline;
+  color: rgb(255, 93, 23);
+}
+
+#footer-area {
+  background-color: black;
 }
