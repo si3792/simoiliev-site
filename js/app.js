@@ -10,7 +10,7 @@ app.controller('mainController', ['$scope', 'smoothScroll', function($scope, smo
     }, {
       title: "Video Games Programming",
       subtitle: "Experience in Unity3D",
-      description: "Making simple 2D games has been a hobby of mine for years. In my opinion, video game programming is a medium that teaches a lot about OOP and good software design, while being a very creative endeavour as well. <a href='#' scroll-to='liftoff-area'>Check out my latest project!</a>"
+      description: "Making simple 2D games has been a hobby of mine for years. In my opinion, video game programming is a medium that teaches a lot about OOP and good software design, while being a very creative endeavour as well. <a href='#liftoff-area' scroll-to='liftoff-area'>Check out my latest project!</a>"
     }, {
       title: "Algorithmic Experience",
       subtitle: "Competitive programmer since 2008",
