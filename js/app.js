@@ -1,7 +1,7 @@
 app = angular.module('mainApp', ['smoothScroll', 'ngSanitize', 'snapscroll']);
 
 
-app.controller('overviewController', ['$scope', function($scope) {
+app.controller('mainController', ['$scope', 'smoothScroll', function($scope, smoothScroll) {
 
   $scope.cardsData = [{
       title: "Jacobs University Bremen",
@@ -22,7 +22,7 @@ app.controller('overviewController', ['$scope', function($scope) {
     }, {
       title: "My CV",
       subtitle: "Full Curriculum Vitae",
-      description: "For more information, you can grab my CV as a pdf <b>HERE.</b>"
+      description: "For more information, you can grab my <a href='#' scroll-to='liftoff-area'>CV</a> as a pdf here!"
     }
 
   ];
@@ -30,6 +30,17 @@ app.controller('overviewController', ['$scope', function($scope) {
 
 }]);
 
+app.directive('compile', ['$compile', function ($compile) {
+  return function(scope, element, attrs) {
+    scope.$watch(
+      function(scope) {
+        return scope.$eval(attrs.compile);
+      },
+      function(value) {
+        element.html(value);
+        $compile(element.contents())(scope);
+      })}
+  }]);
 
 
 app.directive("overviewCard", function() {

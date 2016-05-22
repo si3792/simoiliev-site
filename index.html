@@ -26,11 +26,11 @@
 
     <title>Simo Iliev</title>
   </head>
-  <body ng-app="mainApp">
+  <body ng-app="mainApp" ng-controller="mainController as mainCtrl">
 
     <main> <!-- Experimental: snapscroll="snap-duration=2000" fit-window-height=""> -->
       <!-- Intro Area -->
-      <div id="intro-area" class="full-height">
+      <div id="intro-area" class="full-height" smooth-scroll>
         <div class="vertical-offset-large">
           <div class="container">
             <div class="row">
@@ -71,7 +71,7 @@
       </div>
 
         <!-- Overview Area -->
-        <div id="overview-area" class="full-height text-center" ng-controller="overviewController as overviewCtrl">
+        <div id="overview-area" class="full-height text-center">
           <div id="overview-header">
             <h1> Overview </h1>
           </div>
@@ -101,12 +101,8 @@
         </div>
 
       <!-- Liftoff Area -->
-      <div class="full-height" data-vide-bg="webm: videos/liftoff.webm, png: videos/liftoff.png" data-vide-options="posterType: png">
+      <div id="liftoff-area" class="full-height" data-vide-bg="webm: videos/liftoff.webm, png: videos/liftoff.png" data-vide-options="posterType: png">
 
-      <!-- Footer Area -->
-     <div class="full-height">
-       Bla
-     </div>
     </main>
 
   </body>
