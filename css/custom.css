@@ -3,6 +3,10 @@
   border: 1px solid grey;
 }
 
+.main {
+  overflow: visible;
+}
+
 /* Needed for equal-height columns */
 .row {
   display: -webkit-box;
