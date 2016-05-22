@@ -28,7 +28,7 @@
   </head>
   <body ng-app="mainApp" ng-controller="mainController as mainCtrl">
 
-    <!--<main>  Experimental: snapscroll="snap-duration=2000" fit-window-height=""> -->
+    <main class="scroller"> <!--  Experimental: snapscroll="snap-duration=2000" fit-window-height=""> -->
       <!-- Intro Area -->
       <div id="intro-area" class="full-height" smooth-scroll>
         <div class="vertical-offset-large">
@@ -100,16 +100,34 @@
           </div>
         </div>
 
+
       <!-- Liftoff Area -->
+
       <div id="liftoff-area" class="full-height" >
-        <div class="full-height" data-vide-bg="webm: videos/liftoff.webm, png: videos/liftoff.png" data-vide-options="posterType: png">
+        <div class="full-height inner" data-vide-bg="webm: videos/liftoff.webm, png: videos/liftoff.png" data-vide-options="posterType: png">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12 col-md-5 liftoff-info text-center">
+                <div class="liftoff-title">
+                  <b><h1>Liftoff</h1></b>
+                </div>
+                <div class="text-left liftoff-text">
+                  Liftoff is an arcade-feeling 2-player game, which was originally created during
+                  the 2016 Nordic Game Jam. Since the hackathon, I have continued to work on it.
+                  While still WIP, you can download a beta build for Windows, Mac or Linux.
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
 
       <!-- Footer Area -->
       <div id="footer-area" class="full-height">
         This is a test
       </div>
-
+    </main>
   </body>
 </html>
