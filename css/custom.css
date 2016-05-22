@@ -4,7 +4,7 @@
 }
 
 .main {
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* Needed for equal-height columns */
@@ -172,12 +172,13 @@ html, body {
 }
 
 .contact-card {
-  min-height: 40vh;
+  min-height: 30vh;
 }
 
 .rev-arrow-holder {
   display: flex;
   justify-content: center;
+  padding-bottom: 5vh;
 }
 
 .rev-arrow {
