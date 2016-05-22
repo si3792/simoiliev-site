@@ -22,7 +22,7 @@ app.controller('mainController', ['$scope', 'smoothScroll', function($scope, smo
     }, {
       title: "My CV",
       subtitle: "Full Curriculum Vitae",
-      description: "For more information, you can <a>grab my full CV as a pdf.</a>"
+      description: "For more information, you can <a href='http://simoiliev.me/cv_Simo.pdf' target='_blank'>grab my full CV as a pdf.</a>"
     }
 
   ];
