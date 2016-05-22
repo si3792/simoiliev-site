@@ -1,0 +1,144 @@
+/* For testing purposes */
+
+.markerf {
+  border: 1px solid grey;
+}
+
+/* Needed for equal-height columns */
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.vertical-offset-large{
+  padding-top: 30vh;
+}
+
+
+#overview-area {
+  background-image: url("../images/jacobs-background.jpg");
+  background-size: cover;
+}
+
+
+/* For vertically centering content */
+.flexbox-vcenter {
+ display:flex;
+ justify-content:center;
+ flex-flow: column;
+}
+
+
+/* Disables horizontal scrollbar, which shows up during animation*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Remove gutter from bootstrap rows */
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+
+#arrow {
+  padding-top: 5vh;
+}
+
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+#overview-header {
+  background-color: white;
+  display: inline-block;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 1vh;
+  margin-bottom: 1vh;
+  border-radius: 0 0 4vw 4vw;
+  border: 0px solid #ffffff;
+}
+
+.overview-card {
+  background-color: white;
+  border-radius: 2px;
+  opacity: 0.85;
+  height: 100%;
+  width: 100%;
+  min-height: 26vh;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12), 0 6px 6px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+}
+
+.overview-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.19), 0 12px 12px rgba(0,0,0,0.23);
+  opacity: 0.95;
+}
+
+.overview-card-text {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+}
+
+.contain-card {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 95%;
+  min-height: 29vh;
+  min-width: 29vw;
+}
+
+.overview-card-title {
+  position: absolute;
+  background-color: rgb(255, 228, 235);
+  height: 30%;
+  width: 100%;
+}
+
+.overview-card-content {
+  position: absolute;
+  background-color: rgb(175, 178, 189);
+  height: 60%;
+  top: 30%;
+  width: 100%;
+}
+
+.overview-card-title h4 {
+  font-size: 1.5vmin;
+  margin-top: -.4em;
+}
+
+.overview-card-title h3 {
+  font-size: 3vmin;
+}
