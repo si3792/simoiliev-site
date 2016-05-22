@@ -1,9 +1,3 @@
-/* For testing purposes */
-
-.markerf {
-  border: 1px solid grey;
-}
-
 /* Needed for equal-height columns */
 .row {
   display: -webkit-box;
@@ -25,12 +19,10 @@
   padding-top: 30vh;
 }
 
-
 #overview-area {
   background-image: url("../images/jacobs-background.jpg");
   background-size: cover;
 }
-
 
 /* For vertically centering content */
 .flexbox-vcenter {
@@ -38,7 +30,6 @@
  justify-content:center;
  flex-flow: column;
 }
-
 
 /* Disables horizontal scrollbar, which shows up during animation*/
 html, body {
@@ -58,22 +49,8 @@ html, body {
 }
 
 
-
 #arrow {
   padding-top: 5vh;
-}
-
-
-.text-align-left {
-  text-align: left;
-}
-
-.text-align-right {
-  text-align: right;
-}
-
-.text-align-center {
-  text-align: center;
 }
 
 #overview-header {
@@ -121,21 +98,24 @@ html, body {
 
 .overview-card-title {
   position: absolute;
-  background-color: rgb(255, 228, 235);
+  background-color: rgb(255, 255, 255);
   height: 30%;
   width: 100%;
 }
 
 .overview-card-content {
   position: absolute;
-  background-color: rgb(175, 178, 189);
+  background-color: rgb(230, 230, 230);
   height: 60%;
   top: 30%;
   width: 100%;
+  font-size: 1.7vmin;
+  text-align: left;
+  padding: 20px;
 }
 
 .overview-card-title h4 {
-  font-size: 1.5vmin;
+  font-size: 1.6vmin;
   margin-top: -.4em;
 }
 
