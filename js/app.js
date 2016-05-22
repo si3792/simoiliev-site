@@ -1,4 +1,4 @@
-app = angular.module('mainApp', ['smoothScroll', 'ngSanitize']);
+app = angular.module('mainApp', ['smoothScroll', 'ngSanitize', 'snapscroll']);
 
 
 app.controller('overviewController', ['$scope', function($scope) {

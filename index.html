@@ -13,6 +13,7 @@
     <script src="bower_components/typed.js/dist/typed.min.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="bower_components/vide/dist/jquery.vide.min.js"></script>
+    <script src="bower_components/angular-snapscroll/dist/angular-snapscroll.min.js"></script>
 
     <!-- js scripts -->
     <script src="js/app.js"></script>
@@ -27,7 +28,7 @@
   </head>
   <body ng-app="mainApp">
 
-    <main>
+    <main> <!-- Experimental: snapscroll="snap-duration=2000" fit-window-height=""> -->
       <!-- Intro Area -->
       <div id="intro-area" class="full-height">
         <div class="vertical-offset-large">
@@ -102,13 +103,11 @@
       <!-- Liftoff Area -->
       <div class="full-height" data-vide-bg="webm: videos/liftoff.webm, png: videos/liftoff.png" data-vide-options="posterType: png">
 
+      <!-- Footer Area -->
+     <div class="full-height">
+       Bla
+     </div>
     </main>
-
-    <footer>
-      <div class="full-height">
-      </div>
-
-    </footer>
 
   </body>
 </html>
