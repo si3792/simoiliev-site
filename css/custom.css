@@ -162,5 +162,31 @@ html, body {
 }
 
 #footer-area {
+  text-align: center;
   background-color: black;
+  color: white;
+}
+
+.contact-card {
+  min-height: 40vh;
+}
+
+.rev-arrow-holder {
+  display: flex;
+  justify-content: center;
+}
+
+.rev-arrow {
+  max-height: 20vh;
+}
+
+#footer-header {
+  background-color: rgb(19, 19, 19);
+  display: inline-block;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 1vh;
+  margin-bottom: 1vh;
+  border-radius: 0 0 4vw 4vw;
+  border: 0px solid rgb(19, 19, 19);
 }

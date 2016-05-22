@@ -102,6 +102,12 @@
   animation-iteration-count: 1, infinite;
 }
 
+.pulse {
+  animation: arrow-pulse 2s;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+}
+
 .profile-picture-anim  {
   opacity: 0;
   display: block;
