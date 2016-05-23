@@ -18,7 +18,7 @@ app.controller('mainController', ['$scope', 'smoothScroll', function($scope, smo
     }, {
       title: "Web development",
       subtitle: "Basic knowledge of front-end",
-      description: "A course in web applications I took recently sparked my interest in it. I am familiar with HTML, CSS, JS; as well as frameworks like Angular, Bootstrap, Materialize, etc. You can check out the github repository for this website <a>here</a>"
+      description: "A course in web applications I took recently sparked my interest in it. I am familiar with HTML, CSS, JS; as well as frameworks like Angular, Bootstrap, Materialize, etc. You can check out the <a href='https://github.com/si3792/simoiliev-site'>github repository for this website.</a>"
     }, {
       title: "My CV",
       subtitle: "Full Curriculum Vitae",
