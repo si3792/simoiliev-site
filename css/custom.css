@@ -122,19 +122,46 @@ html, body {
   height: 60%;
   top: 30%;
   width: 100%;
-  font-size: 1.7vmin;
+  font-size: 17px;
   text-align: left;
   padding: 20px;
+  overflow: auto;
 }
 
 .overview-card-title h4 {
-  font-size: 1.6vmin;
+  font-size: 19px;
   margin-top: -.4em;
 }
 
 .overview-card-title h3 {
-  font-size: 3vmin;
+  font-size: 26px;
 }
+
+/* screen-md */
+@media only screen and (max-width: 1200px) {
+        .overview-card-content{ font-size:14px;}
+
+        .overview-card-title h3 {
+          font-size: 20px;
+        }
+
+        .overview-card-title h4 {
+          font-size: 15px;
+        }
+
+     }
+
+/* screen-sm */
+@media only screen and (max-width: 992px) {
+        .overview-card-content{ font-size:16px;}
+
+     }
+
+/* screen-xs */
+@media only screen and (max-width: 768px) {
+        .overview-card-content{ font-size:12px;}
+     }
+
 
 #liftoff-area {
   position: relative;
@@ -163,6 +190,13 @@ html, body {
   display: inline;
   text-decoration: underline;
   color: rgb(255, 93, 23);
+}
+
+.liftoff-img {
+  max-width: 30vw;
+  max-width: 200px;
+  padding-top: 30px;
+  margin: auto;
 }
 
 #footer-area {
