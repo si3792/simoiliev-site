@@ -137,6 +137,27 @@ html, body {
   font-size: 26px;
 }
 
+
+/* screen-1366-1280 */
+@media only screen and (max-width: 1400px) and (min-width:1200px) {
+        .overview-card-content{ font-size:14px;}
+
+        .overview-card-title h3 {
+          font-size: 23px;
+          margin-top: 0.35em;
+        }
+
+        .overview-card-title h4 {
+          font-size: 15px;
+          margin-top: -.6em;
+        }
+
+        .overview-card-content {
+          font-size: 14px;
+        }
+
+     }
+
 /* screen-md */
 @media only screen and (max-width: 1200px) {
         .overview-card-content{ font-size:14px;}
