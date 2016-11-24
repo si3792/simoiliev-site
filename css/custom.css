@@ -33,7 +33,7 @@
 }
 
 #overview-area {
-  background-image: url("../images/jacobs-background.jpg");
+  background-image: url("../images/background.jpg");
   background-size: cover;
 }
 
@@ -78,7 +78,7 @@ html, body {
 }
 
 .overview-card {
-  background-color: white;
+  background-color: rgba(0,0,0,0.12);
   border-radius: 2px;
   opacity: 0.85;
   height: 100%;
@@ -111,14 +111,15 @@ html, body {
 
 .overview-card-title {
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(10, 19, 9, 0.87);
+  color: rgb(255, 255, 255);
   height: 30%;
   width: 100%;
 }
 
 .overview-card-content {
   position: absolute;
-  background-color: rgb(230, 230, 230);
+  background-color: rgba(230, 230, 230, 0.8);
   height: 60%;
   top: 30%;
   width: 100%;

@@ -3,52 +3,65 @@ app = angular.module('mainApp', ['smoothScroll', 'ngSanitize', 'snapscroll']);
 
 app.controller('mainController', ['$scope', 'smoothScroll', function($scope, smoothScroll) {
 
-  $scope.cardsData = [{
-      title: "Jacobs University Bremen",
-      subtitle: "BSc in Computer Science",
-      description: "I am in my second year of studies, with expected graduation in 2017. For more information about Jacobs University Bremen, <a target='_blank' href='http://www.jacobs-university.de'>visit the official site</a>."
-    }, {
-      title: "Video Games Programming",
-      subtitle: "Experience in Unity3D",
-      description: "Making simple 2D games has been a hobby of mine for years. In my opinion, video game programming is a medium that teaches a lot about OOP and good software design, while being a very creative endeavour as well. <a href='#liftoff-area' scroll-to='liftoff-area'>Check out my latest project!</a>"
-    }, {
-      title: "Algorithmic Experience",
-      subtitle: "Competitive programmer since 2008",
-      description: "Participating in numerous national and international programming competitions has helped me build a solid foundation of problem solving, knowledge about different algorithms and the related complexity theory."
-    }, {
-      title: "Web development",
-      subtitle: "Basic knowledge of front-end",
-      description: "A course in web applications I took recently sparked my interest in it. I am familiar with HTML, CSS, JS; as well as frameworks like Angular, Bootstrap, Materialize, etc. You can check out the <a href='https://github.com/si3792/simoiliev-site'>github repository for this website.</a>"
-    }, {
-      title: "My CV",
-      subtitle: "Full Curriculum Vitae",
-      description: "For more information, you can <a href='http://simoiliev.me/cv_Simo.pdf' target='_blank'>grab my full CV as a pdf.</a>"
-    }
+    $scope.cardsData = [{
+            title: "Web development",
+            subtitle: "Frontend and Backend",
+            description: "I have experience using Django REST framework for developing backend server applications. " +
+                "I am also familar with HTML, CSS, JS on the frontend; as well as Angular, Bootstrap and tools like npm and Karma. " +
+                " You can check out the <a href='https://github.com/si3792/drf-angular-user-system'><b>github repository for my latest web project.</b></a>"
+        }, {
+            title: "Video Games Programming",
+            subtitle: "Unity3D makes me happy",
+            description: "I made my first video game when I was 11. Over the years I've been to a few game jams and worked on video games as a hobby."  +
+            " In my opinion, video game programming is a medium that teaches a lot about OOP and good software design, while being a very <i>creative</i> endeavour as well."
+        }, {
+            title: "Algorithmic Experience",
+            subtitle: "Competitive programmer since 2008",
+            description: "Participating in numerous programming competitions has helped me build a foundation of problem solving." +
+            " <blockquote> I represented Jacobs University Bremen at <a href='http://www.nwerc.eu/'><b>NWERC 2014 and 2015 in Linköping, Sweden.</b></a> </blockquote>"
+        }, {
+            title: "About me",
+            subtitle: "Interests and preferences",
+            description:
+            "<ul> <li> I am an avid <b><a target='_blank' href='http://simoiliev.me/images/arch-linux.png'>linux user</a></b> </li>" +
+            "<li> ... interested in networking and networking security</li>" +
+            "<li> <b>Python</b> has been my favourite language of late </li>" +
+            "<li> ... though C++ is what I've written the most code in </li>" +
+            "<li> ... and I try to <a href='https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/'><b>stay away from PHP.</b> </a></li>"
+            + "</ul>"
 
-  ];
+        }, {
+            title: "My CV",
+            subtitle: "Full Curriculum Vitae",
+            description: "<b><p>For more information, you can <a href='http://simoiliev.me/cv_Simo.pdf' target='_blank'>grab my full CV as a pdf.</a></p></b><br>" +
+            "<i>Also, if you are wondering about the background, this is a shot I took of my beautiful hometown, <a target='_blank' href='https://en.wikipedia.org/wiki/Plovdiv'><b>Plovdiv</b></a>.</i>"
+        }
+
+    ];
 
 
 }]);
 
-app.directive('compile', ['$compile', function ($compile) {
-  return function(scope, element, attrs) {
-    scope.$watch(
-      function(scope) {
-        return scope.$eval(attrs.compile);
-      },
-      function(value) {
-        element.html(value);
-        $compile(element.contents())(scope);
-      })}
-  }]);
+app.directive('compile', ['$compile', function($compile) {
+    return function(scope, element, attrs) {
+        scope.$watch(
+            function(scope) {
+                return scope.$eval(attrs.compile);
+            },
+            function(value) {
+                element.html(value);
+                $compile(element.contents())(scope);
+            })
+    }
+}]);
 
 
 app.directive("overviewCard", function() {
-  return {
-    restrict: 'E',
-    scope: {
-      data: '='
-    },
-    templateUrl: '../shared/overview-card.html'
-  }
+    return {
+        restrict: 'E',
+        scope: {
+            data: '='
+        },
+        templateUrl: '../shared/overview-card.html'
+    }
 });
