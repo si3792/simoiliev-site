@@ -8,7 +8,7 @@ $(function() {
 */
 
         $(".typing").typed({
-          strings: ['Computer <br> ^100 Science <br> ^100 Major'],
+          strings: ['Computer <br> ^100 Programmer'],
           typeSpeed: 1.5,
           showCursor: false,
           startDelay: 4250
