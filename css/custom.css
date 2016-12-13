@@ -278,6 +278,24 @@ html, body {
   color: rgb(23, 130, 255);
 }
 
+#usersystem-area {
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+#usersystem-area .img-responsive {
+  margin: 0 auto;
+  max-height: 75vh;
+  max-width:  75vh;
+}
+
+#usersystem-area a {
+  display: inline;
+  text-decoration: underline;
+  color: rgb(23, 130, 255);
+}
+
 #footer-area {
   text-align: center;
   background-color: rgb(42, 42, 42);

@@ -133,15 +133,68 @@
                 </div>
             </div>
 
+            <!-- Usersystem Area -->
+            <div id='usersystem-area' class='full-height'>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
+                            <div class="flexbox-vcenter">
+                                <h2>
+                                    <b>drf-angular-user-system</b>
+
+                              <small> <br />  A user management system, consisting of a Django server exposing a web API and an Angular single page app consuming it.<br/>
+                              </small></h2>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                    <div clas='row'>
+                        <div class='col-sm-12 col-md-6'>
+                            <h2>Features</h2>
+                            <ul class='text-left'>
+                                <li>
+                                    Completely separated Server and Client
+                                </li>
+                                <li>
+                                    User registraton, authentication and basic management
+                                    <ul>
+                                        <li>Django OAuth Toolkit is used as an OAuth2 provider</li>
+                                        <li>User registration with form validation and async validators</li>
+                                        <li>User authentication, update and delete</li>
+                                        <li>Social sign in with Facebook and Google</li>
+                                        <li>Google sign in implements authorization code grant, which allows for server calls to Google's API</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Configurable routing system for the Client
+                                </li>
+                            </ul>
+                            <h3 class='text-center'>
+                            <a href='https://github.com/si3792/drf-angular-user-system' target='_blank'>
+                              Link to the github repository</a></h3>
+                            <hr />
+                            <img class='img-responsive' src='images/technologies.png'/>
+                            <hr />
+                        </div>
+                        <div class='col-sm-12 col-md-6'>
+                            <img class='img-responsive' src='images/drf-angular-user-system.png'/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- ICough Area -->
             <div id='icough-area' class='full-height'>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12 col-md-5 icough-info text-center">
                             <div class="flexbox-vcenter icough-text">
-                                <h3><b>ICough</b></h3> A web application for scheduling doctor's appointments. <br />
-                                Built on top of my drf-angular-user-system and features
-                                Google Calendar integration.
+                                <h3>
+                                    <b>ICough</b>
+                                </h3>
+                                A web application for scheduling doctor's appointments.
+                                <br/>
+                                Built on top of my drf-angular-user-system and features Google Calendar integration.
                                 <a target="_blank" href='http://simoiliev.me/icough.html'>Check it out here (social login disabled)</a>
                                 <a target="_blank" href='https://github.com/si3792/icough'>Github repository</a>
                             </div>
@@ -176,15 +229,15 @@
                                             </a>
                                         </div>
                                         <div class="col-xs-4">
-                                            <a ng-mouseover='changeFooterText("Contact me on FB")' ng-mouseleave='changeFooterText("")'  href="http://facebook.com/si3792" target="_blank">
+                                            <a ng-mouseover='changeFooterText("Contact me on FB")' ng-mouseleave='changeFooterText("")' href="http://facebook.com/si3792" target="_blank">
                                                 <img src="images/facebook.png" class="img-responsive"/>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="row">
-                                      <div class='col-xs-12 footer-text'>
-                                          <h2>{{footerText}}</h2>
-                                      </div>
+                                        <div class='col-xs-12 footer-text'>
+                                            <h2>{{footerText}}</h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
