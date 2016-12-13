@@ -280,7 +280,7 @@ html, body {
 
 #footer-area {
   text-align: center;
-  background-color: black;
+  background-color: rgb(42, 42, 42);
   color: white;
   font-family: 'Roboto', sans-serif;
 }
@@ -297,6 +297,12 @@ html, body {
 
 .rev-arrow {
   max-height: 20vh;
+}
+
+.footer-text {
+  color: white;
+  padding-top: 30px;
+  min-height: 10vh;
 }
 
 #footer-header {

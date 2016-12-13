@@ -70,6 +70,11 @@ app.controller('mainController', ['$scope', '$interval', 'preloader', 'smoothScr
     $scope.changeBackground();
     $interval($scope.changeBackground, 1700);
 
+    $scope.footerText = '';
+    $scope.changeFooterText = function(newtext) {
+      $scope.footerText = newtext;
+    };
+
 }]);
 
 app.directive('compile', ['$compile', function($compile) {

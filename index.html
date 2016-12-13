@@ -167,19 +167,24 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <a href="https://github.com/si3792" target="_blank"><img src="images/github.png" class="img-responsive"/>
+                                            <a ng-mouseover='changeFooterText("Find me on github")' ng-mouseleave='changeFooterText("")' href="https://github.com/si3792" target="_blank"><img src="images/github.png" class="img-responsive"/>
                                             </a>
                                         </div>
                                         <div class="col-xs-4">
-                                            <a href="mailto:simo.t.iliev@gmail.com" target="_blank">
+                                            <a ng-mouseover='changeFooterText("Drop me an email")' ng-mouseleave='changeFooterText("")' href="mailto:simo.t.iliev@gmail.com" target="_blank">
                                                 <img src="images/mail.png" class="img-responsive"/>
                                             </a>
                                         </div>
                                         <div class="col-xs-4">
-                                            <a href="http://facebook.com/si3792" target="_blank">
+                                            <a ng-mouseover='changeFooterText("Contact me on FB")' ng-mouseleave='changeFooterText("")'  href="http://facebook.com/si3792" target="_blank">
                                                 <img src="images/facebook.png" class="img-responsive"/>
                                             </a>
                                         </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class='col-xs-12 footer-text'>
+                                          <h2>{{footerText}}</h2>
+                                      </div>
                                     </div>
                                 </div>
                             </div>
