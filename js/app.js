@@ -110,7 +110,7 @@ app.controller('mainController', ['$scope', '$document', '$window', '$interval',
         for (var area in $scope.areasY) {
             var obj = $scope.areasY[area];
             if (Math.abs($scope.curPos - obj.position) < $scope.SNAP_DELTA_MAX && Math.abs($scope.curPos - obj.position) > $scope.SNAP_DELTA_MIN) {
-                console.log('Snapping to ' + area); //
+                // console.log('Snapping to ' + area); //
                 $scope.scrollTo(area);
                 $scope.snapping = true;
                 $scope.disableScroll();
