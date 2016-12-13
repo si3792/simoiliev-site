@@ -1,7 +1,7 @@
 app = angular.module('mainApp', ['smoothScroll', 'ngSanitize', 'snapscroll']);
 
 
-app.controller('mainController', ['$scope', '$interval', 'preloader', 'smoothScroll', function($scope, $interval, preloader, smoothScroll) {
+app.controller('mainController', ['$scope', '$document', '$window', '$interval', '$timeout', 'preloader', 'smoothScroll', function($scope, $document, $window, $interval, $timeout, preloader, smoothScroll) {
 
     $scope.cardsData = [{
             title: "Web development",
@@ -45,7 +45,7 @@ app.controller('mainController', ['$scope', '$interval', 'preloader', 'smoothScr
         "../images/icough-3.png",
         "../images/icough-4.png"
     ];
-    preloader.preloadImages( $scope.imageLocations )
+    preloader.preloadImages($scope.imageLocations)
 
     $scope.icoughClassBacks = [
         'icough-back-1',
@@ -72,8 +72,129 @@ app.controller('mainController', ['$scope', '$interval', 'preloader', 'smoothScr
 
     $scope.footerText = '';
     $scope.changeFooterText = function(newtext) {
-      $scope.footerText = newtext;
+        $scope.footerText = newtext;
     };
+
+
+    $scope.SNAP_DELTA_MAX = window.innerHeight / 3;
+    $scope.SNAP_DELTA_MIN = 2;
+    $scope.SNAP_TIME_DELTA = 200;
+    $scope.snapping = false; // True during snapping
+    $scope.curPos = 0;
+    $scope.SNAPPING_ENABLED = true;
+    $scope.SNAPPING_ENABLED_MIN_WIDTH = 1280;
+
+    $scope.scrollTo = function(position) {
+        var element = document.getElementById(position);
+        smoothScroll(element, {
+            'duration': 700
+        });
+    };
+
+    $document.on('scroll', function() {
+        // do your things like logging the Y-axis
+
+        $scope.curPos = $window.scrollY;
+
+        if(!$scope.snapping) {
+          $scope.lastScrolled = moment();
+        }
+        // console.log(curPos);
+    });
+
+    $scope.triggerSnapping = function() {
+        if(!$scope.SNAPPING_ENABLED)return;
+        if ($scope.snapping) return;
+        if((moment() - $scope.lastScrolled) < $scope.SNAP_TIME_DELTA)return;
+
+        for (var area in $scope.areasY) {
+            var obj = $scope.areasY[area];
+            if (Math.abs($scope.curPos - obj.position) < $scope.SNAP_DELTA_MAX && Math.abs($scope.curPos - obj.position) > $scope.SNAP_DELTA_MIN) {
+                console.log('Snapping to ' + area); //
+                $scope.scrollTo(area);
+                $scope.snapping = true;
+                $scope.disableScroll();
+                $timeout(function() {
+                    $scope.enableScroll();
+                    $scope.snapping = false;
+                }, 700);
+            }
+        }
+    };
+    $interval($scope.triggerSnapping, 50);
+
+
+    $scope.updateAreasY = function() {
+
+        if(window.innerWidth < $scope.SNAPPING_ENABLED_MIN_WIDTH)$scope.SNAPPING_ENABLED = false;
+        else $scope.SNAPPING_ENABLED = true;
+
+        $scope.areasY = {
+            'intro-area': {
+                'position': $('#intro-area').offset().top
+            },
+            'overview-area': {
+                'position': $('#overview-area').offset().top
+            },
+            'liftoff-area': {
+                'position': $('#liftoff-area').offset().top
+            },
+            'usersystem-area': {
+                'position': $('#usersystem-area').offset().top
+            },
+            'icough-area': {
+                'position': $('#icough-area').offset().top
+            },
+            'footer-area': {
+                'position': $('#footer-area').offset().top
+            }
+        };
+
+        //console.log($scope.areasY);
+    };
+    $scope.updateAreasY();
+    $interval($scope.updateAreasY, 1000);
+
+
+    // LOGIC For temporary scroll disabling
+    var keys = {
+        37: 1,
+        38: 1,
+        39: 1,
+        40: 1
+    };
+
+    function preventDefault(e) {
+        e = e || window.event;
+        if (e.preventDefault)
+            e.preventDefault();
+        e.returnValue = false;
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    $scope.disableScroll = function() {
+        if (window.addEventListener) // older FF
+            window.addEventListener('DOMMouseScroll', preventDefault, false);
+        window.onwheel = preventDefault; // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+        window.ontouchmove = preventDefault; // mobile
+        document.onkeydown = preventDefaultForScrollKeys;
+    }
+
+    $scope.enableScroll = function() {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
+    }
 
 }]);
 

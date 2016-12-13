@@ -14,6 +14,7 @@
         <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
         <script src="bower_components/vide/dist/jquery.vide.min.js"></script>
         <script src="bower_components/angular-snapscroll/dist/angular-snapscroll.min.js"></script>
+        <script src="bower_components/moment/min/moment.min.js"></script>
 
         <!-- js scripts -->
         <script src="js/app.js"></script>
@@ -66,7 +67,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-2 col-md-offset-5 col-xs-4 col-xs-offset-4  arrow-anim">
-                                <a href="#" scroll-to="overview-area">
+                                <a href="#" ng-click='scrollTo("overview-area")'>
                                     <img src="images/arrow.svg" id="arrow" class="img-responsive"/>
                                 </a>
                             </div>
@@ -260,7 +261,7 @@
                 </div>
 
                 <div class="rev-arrow-holder">
-                    <a href="#" scroll-to="intro-area">
+                    <a ng-click='scrollTo("intro-area")'>
                         <img src="images/arrow-rev.svg" id="arrow" class="rev-arrow pulse"/>
                     </a>
                 </div>
