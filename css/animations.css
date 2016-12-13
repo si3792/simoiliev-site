@@ -96,7 +96,7 @@
   opacity: 0;
   visibility: hidden;
   animation: arrow-reveal 0.5s, arrow-pulse 2s;
-  animation-delay: 2.9s, 3.4s;
+  animation-delay: 2.6s, 3.1s;
   animation-timing-function: ease-in, linear;
   animation-fill-mode: forwards, none;
   animation-iteration-count: 1, infinite;

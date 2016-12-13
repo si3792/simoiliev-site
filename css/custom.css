@@ -7,6 +7,7 @@
   overflow: hidden;
 }
 
+
 /* Needed for equal-height columns */
 .row {
   display: -webkit-box;
@@ -32,9 +33,14 @@
   padding-top: 10vh;
 }
 
+#intro-area {
+  font-family: 'Roboto', sans-serif;
+}
+
 #overview-area {
   background-image: url("../images/background.jpg");
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* For vertically centering content */
@@ -153,7 +159,7 @@ html, body {
         }
 
         .overview-card-content {
-          font-size: 10px;
+          font-size: 12px;
         }
 
      }
@@ -163,12 +169,14 @@ html, body {
         .overview-card-content{ font-size:14px;}
 
         .overview-card-title h3 {
-          font-size: 20px;
+          font-size: 15px;
         }
 
         .overview-card-title h4 {
-          font-size: 15px;
+          font-size: 0px;
         }
+
+        .overview-card-content{ font-size: 10px;}
 
      }
 
@@ -192,6 +200,7 @@ html, body {
 
 #liftoff-area {
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
 .liftoff-info {
@@ -230,6 +239,7 @@ html, body {
   background-color: rgb(180, 180, 180);
   background-image: url("../images/icough.png");
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 .icough-info {
@@ -237,7 +247,7 @@ html, body {
   min-width: 100vw;
   color: rgb(14, 14, 14);
   font-size: 1.2em;
-  background-color: rgba(198, 198, 198, 0.8);
+  background-color: rgba(198, 198, 198, 0.75);
 }
 
 
@@ -256,6 +266,7 @@ html, body {
   text-align: center;
   background-color: black;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .contact-card {

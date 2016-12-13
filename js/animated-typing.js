@@ -11,7 +11,7 @@ $(function() {
           strings: ['Computer <br> ^100 Programmer'],
           typeSpeed: 1.5,
           showCursor: false,
-          startDelay: 2000
+          startDelay: 2200
         });
 
 
