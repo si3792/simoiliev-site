@@ -7,7 +7,8 @@ app.controller('mainController', ['$scope', '$interval', 'preloader', 'smoothScr
             title: "Web development",
             subtitle: "Frontend and Backend",
             description: "I have experience using Django REST framework for developing backend server applications. " +
-                "I am also familar with HTML, CSS, JS on the frontend; as well as Angular, Bootstrap and tools like npm and Karma. "
+                "I am also familar with HTML, CSS, JS on the frontend; as well as Angular, Bootstrap and tools like npm and Karma. " +
+                "<a href='#' scroll-to='usersystem-area'> <b>Check out my latest web project. </b> </a>"
         }, {
             title: "Video Games Programming",
             subtitle: "Unity3D makes me happy",
