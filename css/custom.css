@@ -123,38 +123,37 @@ html, body {
   height: 60%;
   top: 30%;
   width: 100%;
-  font-size: 17px;
+  font-size: 14px;
   text-align: left;
   padding: 20px;
   overflow: auto;
 }
 
 .overview-card-title h4 {
-  font-size: 19px;
+  font-size: 16px;
   margin-top: -.4em;
 }
 
 .overview-card-title h3 {
-  font-size: 26px;
+  font-size: 20px;
 }
 
 
-/* screen-1366-1280 */
 @media only screen and (max-width: 1400px) and (min-width:1200px) {
-        .overview-card-content{ font-size:14px;}
+        .overview-card-content{ font-size:10px;}
 
         .overview-card-title h3 {
-          font-size: 23px;
+          font-size: 16px;
           margin-top: 0.35em;
         }
 
         .overview-card-title h4 {
-          font-size: 15px;
+          font-size: 12px;
           margin-top: -.6em;
         }
 
         .overview-card-content {
-          font-size: 14px;
+          font-size: 10px;
         }
 
      }
@@ -180,7 +179,7 @@ html, body {
             font-size: 0px;
         }
 
-        .overview-card-content{ font-size:16px;}
+        .overview-card-content{ font-size:14px;}
 
 
      }
@@ -225,6 +224,32 @@ html, body {
   max-width: 200px;
   padding-top: 30px;
   margin: auto;
+}
+
+#icough-area {
+  background-color: rgb(180, 180, 180);
+  background-image: url("../images/icough.png");
+  background-size: cover;
+}
+
+.icough-info {
+  min-height: 20vh;
+  min-width: 100vw;
+  color: rgb(14, 14, 14);
+  font-size: 1.2em;
+  background-color: rgba(198, 198, 198, 0.8);
+}
+
+
+.icough-text {
+  min-height: 15vh;
+  text-align: center;
+}
+
+.icough-text a {
+  display: inline;
+  text-decoration: underline;
+  color: rgb(23, 130, 255);
 }
 
 #footer-area {

@@ -18,7 +18,7 @@ app.controller('mainController', ['$scope', 'smoothScroll', function($scope, smo
             title: "Algorithmic Experience",
             subtitle: "Competitive programmer since 2008",
             description: "Participating in numerous programming competitions has helped me build a foundation of problem solving." +
-            " <blockquote> I represented Jacobs University Bremen at <a href='http://www.nwerc.eu/'><b>NWERC 2014 and 2015 in Linköping, Sweden.</b></a> </blockquote>"
+            " <ul><li> I represented Jacobs University Bremen at <a href='http://www.nwerc.eu/'><b>NWERC 2014 and 2015 in Linköping, Sweden.</b></a> </li> </ul>"
         }, {
             title: "About me",
             subtitle: "Interests and preferences",
