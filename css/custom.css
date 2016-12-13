@@ -237,10 +237,26 @@ html, body {
 
 #icough-area {
   background-color: rgb(180, 180, 180);
-  background-image: url("../images/icough.png");
   background-size: cover;
   font-family: 'Roboto', sans-serif;
 }
+
+.icough-back-1 {
+  background-image: url("../images/icough-1.png");
+}
+
+.icough-back-2 {
+  background-image: url("../images/icough-2.png");
+}
+
+.icough-back-3 {
+  background-image: url("../images/icough-3.png");
+}
+
+.icough-back-4 {
+  background-image: url("../images/icough-4.png");
+}
+
 
 .icough-info {
   min-height: 20vh;
