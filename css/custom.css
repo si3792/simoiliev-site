@@ -299,6 +299,11 @@ html, body {
   color: rgb(23, 130, 255);
 }
 
+.small-arrow {
+  height: 10vh;
+  width:  10vh;
+}
+
 #footer-area {
   text-align: center;
   background-color: rgb(42, 42, 42);
