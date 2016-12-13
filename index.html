@@ -1,166 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- bower dependencies -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
-    <script src="bower_components/typed.js/dist/typed.min.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="bower_components/vide/dist/jquery.vide.min.js"></script>
-    <script src="bower_components/angular-snapscroll/dist/angular-snapscroll.min.js"></script>
+        <!-- bower dependencies -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
+        <script src="bower_components/typed.js/dist/typed.min.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="bower_components/vide/dist/jquery.vide.min.js"></script>
+        <script src="bower_components/angular-snapscroll/dist/angular-snapscroll.min.js"></script>
 
-    <!-- js scripts -->
-    <script src="js/app.js"></script>
-    <script src="js/animated-typing.js"></script>
+        <!-- js scripts -->
+        <script src="js/app.js"></script>
+        <script src="js/animated-typing.js"></script>
 
-    <!-- css -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="css/animations.css" rel="stylesheet">
+        <!-- css -->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/animations.css" rel="stylesheet">
 
-    <title>Simo Iliev</title>
-  </head>
-  <body ng-app="mainApp" ng-controller="mainController as mainCtrl">
+        <title>Simo Iliev</title>
+    </head>
+    <body ng-app="mainApp" ng-controller="mainController as mainCtrl">
 
-    <main class="scroller"> <!--  Experimental: snapscroll="snap-duration=2000" fit-window-height=""> -->
-      <!-- Intro Area -->
-      <div id="intro-area" class="full-height" smooth-scroll>
-        <div class="vertical-offset-large">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-2 hidden-xs"></div>
-              <div class="col-xs-4 col-sm-3 flexbox-vcenter text-right simo-anim">
-                <h1>
-                  Simo
-                </h1>
-              </div>
-              <div class="col-xs-4 col-sm-2  profile-picture-anim">
-                <img src="images/profile-picture.png" class="img-responsive"/>
-              </div>
-              <div class="col-xs-4 col-sm-3   flexbox-vcenter text-left iliev-anim">
-                <h1>
-                  ILIEV
-                </h1>
-              </div>
-              <div class="col-sm-2 hidden-xs"></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6 col-xs-offset-3  text-center">
-                <h3>
-                  <i>
-                    <div class="typing"></div>
-                  </i>
-                </h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-2 col-md-offset-5 col-xs-4 col-xs-offset-4  arrow-anim">
-                <a href="#" scroll-to="overview-area">
-                  <img src="images/arrow.svg" id="arrow" class="img-responsive"/>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-        <!-- Overview Area -->
-        <div id="overview-area" class="full-height text-center">
-          <div id="overview-header">
-            <h1> Overview </h1>
-          </div>
-          <div class="container-fluid text-center">
-            <div class="row no-gutter">
-              <div class="col-xs-12 col-md-4">
-                <overview-card data="cardsData[0]"></overview-card>
-              </div>
-            </div>
-            <div class="row no-gutter">
-              <div class="col-xs-12 col-md-4">
-                <overview-card data="cardsData[1]"></overview-card>
-              </div>
-            </div>
-            <div class="row no-gutter">
-              <div class="col-xs-12 col-md-4">
-                <overview-card data="cardsData[2]"></overview-card>
-              </div>
-              <div class="col-xs-12 col-md-4">
-                <overview-card data="cardsData[3]"></overview-card>
-              </div>
-              <div class="col-xs-12 col-md-4">
-                <overview-card data="cardsData[4]"></overview-card>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      <!-- Liftoff Area -->
-
-      <div id="liftoff-area" class="full-height" >
-        <div class="full-height inner" data-vide-bg="webm: videos/liftoff.webm, png: videos/liftoff.png" data-vide-options="posterType: png">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-xs-12 col-md-5 liftoff-info text-center">
-                <div class="liftoff-title">
-                  <img src="images/liftoff-title.gif" class="img-responsive liftoff-img"/>
+        <main class="scroller">
+            <!--  Experimental: snapscroll="snap-duration=2000" fit-window-height=""> -->
+            <!-- Intro Area -->
+            <div id="intro-area" class="full-height" smooth-scroll>
+                <div class="vertical-offset-large">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-2 hidden-xs"></div>
+                            <div class="col-xs-4 col-sm-3 flexbox-vcenter text-right simo-anim">
+                                <h1>
+                                    Simo
+                                </h1>
+                            </div>
+                            <div class="col-xs-4 col-sm-2  profile-picture-anim">
+                                <img src="images/profile-picture.png" class="img-responsive"/>
+                            </div>
+                            <div class="col-xs-4 col-sm-3   flexbox-vcenter text-left iliev-anim">
+                                <h1>
+                                    ILIEV
+                                </h1>
+                            </div>
+                            <div class="col-sm-2 hidden-xs"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-xs-offset-3  text-center">
+                                <h3>
+                                    <i>
+                                        <div class="typing"></div>
+                                    </i>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-5 col-xs-4 col-xs-offset-4  arrow-anim">
+                                <a href="#" scroll-to="overview-area">
+                                    <img src="images/arrow.svg" id="arrow" class="img-responsive"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-left flexbox-vcenter liftoff-text">
-                  Liftoff is an arcade-feeling 2-player game, which was originally created during
-                  the 2016 Nordic Game Jam. Since the hackathon, I have continued to work on it, and while
-                  the game is still a WIP, you can download a beta build for
-                  <span class="text-right"><a href="https://drive.google.com/file/d/0B5eh7lJo7lMSZXdhMWR2N1padGs">Windows</a>, <a href="http://www.google.com">Mac</a> or <a href="https://drive.google.com/open?id=0B5eh7lJo7lMSV0lwLXBBMWs5VE0">Linux</a></span>
+            </div>
+
+            <!-- Overview Area -->
+            <div id="overview-area" class="full-height text-center">
+                <div id="overview-header">
+                    <h1>
+                        Overview
+                    </h1>
+                </div>
+                <div class="container-fluid text-center">
+                    <div class="row no-gutter">
+                        <div class="col-xs-12 col-md-4">
+                            <overview-card data="cardsData[0]"></overview-card>
+                        </div>
+                    </div>
+                    <div class="row no-gutter">
+                        <div class="col-xs-12 col-md-4">
+                            <overview-card data="cardsData[1]"></overview-card>
+                        </div>
+                    </div>
+                    <div class="row no-gutter">
+                        <div class="col-xs-12 col-md-4">
+                            <overview-card data="cardsData[2]"></overview-card>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <overview-card data="cardsData[3]"></overview-card>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <overview-card data="cardsData[4]"></overview-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liftoff Area -->
+
+            <div id="liftoff-area" class="full-height">
+                <div class="full-height inner" data-vide-bg="webm: videos/liftoff.webm, png: videos/liftoff.png" data-vide-options="posterType: png">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-5 liftoff-info text-center">
+                                <div class="liftoff-title">
+                                    <img src="images/liftoff-title.gif" class="img-responsive liftoff-img"/>
+                                </div>
+                                <div class="text-left flexbox-vcenter liftoff-text">
+                                    Liftoff is an arcade-feeling 2-player game, which was originally created during the 2016 Nordic Game Jam. Since the hackathon, I have continued to work on it, and while the game is still a WIP, you can download a beta build for
+                                    <span class="text-right">
+                                        <a href="https://drive.google.com/file/d/0B5eh7lJo7lMSZXdhMWR2N1padGs">Windows</a>,
+                                        <a href="http://www.google.com">Mac</a>
+                                        or
+                                        <a href="https://drive.google.com/open?id=0B5eh7lJo7lMSV0lwLXBBMWs5VE0">Linux</a>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Area -->
+            <div id="footer-area" class="full-height">
+
+                <div id="footer-header">
+                    <h1>
+                        Contact me
+                    </h1>
                 </div>
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Footer Area -->
-      <div id="footer-area" class="full-height">
-
-        <div id="footer-header">
-          <h1> Contact me </h1>
-        </div>
-
-        <div class="container-fluid vertical-offset-large">
-          <div class="row">
-            <div class="col-xs-12 col-md-4 col-md-offset-4">
-              <div class="contact-card text-center">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-xs-4">
-                      <a href="https://github.com/si3792" target="_blank"><img src="images/github.png" class="img-responsive"/> </a>
-                     </div>
-                    <div class="col-xs-4">
-                    <a href="mailto:simo.t.iliev@gmail.com" target="_blank">  <img src="images/mail.png" class="img-responsive"/> </a>
-                     </div>
-                     <div class="col-xs-4">
-                       <a href="http://facebook.com/si3792" target="_blank"> <img src="images/facebook.png" class="img-responsive"/> </a>
-                      </div>
-                  </div>
+                <div class="container-fluid vertical-offset-large">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 col-md-offset-4">
+                            <div class="contact-card text-center">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <a href="https://github.com/si3792" target="_blank"><img src="images/github.png" class="img-responsive"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <a href="mailto:simo.t.iliev@gmail.com" target="_blank">
+                                                <img src="images/mail.png" class="img-responsive"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <a href="http://facebook.com/si3792" target="_blank">
+                                                <img src="images/facebook.png" class="img-responsive"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+                <div class="rev-arrow-holder">
+                    <a href="#" scroll-to="intro-area">
+                        <img src="images/arrow-rev.svg" id="arrow" class="rev-arrow pulse"/>
+                    </a>
+                </div>
+
             </div>
-          </div>
-        </div>
-
-        <div class="rev-arrow-holder">
-          <a href="#" scroll-to="intro-area">
-            <img src="images/arrow-rev.svg" id="arrow" class="rev-arrow pulse"/>
-          </a>
-        </div>
-
-      </div>
-    </main>
-  </body>
+        </main>
+    </body>
 </html>
